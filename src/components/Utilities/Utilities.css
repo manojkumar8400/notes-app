@@ -1,0 +1,41 @@
+/*           For Flex          */
+
+.flex{
+    display: flex;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+
+/*            For grid             */
+
+.grid{
+    display: grid;
+}
+
+.jstfy-ctnt-spc-between{
+    justify-content: space-between;
+}
+
+.jstfy-ctnt-center{
+    justify-content: center;
+}
+
+.jstfy-ctnt-spc-around{
+    justify-content: space-around;
+}
+
+.align-itm-center{
+    align-items: center;
+}
+
+/*              Positions            */
+
+.position-sticky{
+    position: sticky;
+}
+
+.z-index{
+    z-index: 1;
+}
