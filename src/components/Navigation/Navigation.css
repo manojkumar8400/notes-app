@@ -2,7 +2,7 @@
     padding-top: .3rem;
     background-color: var(--secondary-color);
     box-shadow: 1px 1px 1px var(--gray-500);
-    top: 0%;
+    padding-bottom: .5rem;
 }
 
 .logo-design {
