@@ -10,6 +10,7 @@ const Navigation = () => {
             <nav className="nav-bar flex jstfy-ctnt-spc-between position-sticky z-index">
                 <div className='logo-design flex flex-direction-column'>
                     <Link to="/" className="logo"><span> Notejoy </span></Link>
+                </div>
                 <div className='logo-design flex'>
                     <Link to="/" className="logo"><span>Notejoy</span> </Link>
                 </div>
