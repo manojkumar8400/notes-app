@@ -11,9 +11,6 @@ const Navigation = () => {
                 <div className='logo-design flex flex-direction-column'>
                     <Link to="/" className="logo"><span> Notejoy </span></Link>
                 </div>
-                <div className='logo-design flex'>
-                    <Link to="/" className="logo"><span>Notejoy</span> </Link>
-                </div>
                 <ul className="side-nav-section flex jstfy-ctnt-spc-between align-itm-center">
                     <Link to="/Login">
                         <li className="login-btn">👤</li>
