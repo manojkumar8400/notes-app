@@ -2,7 +2,7 @@
     padding-top: .3rem;
     background-color: var(--secondary-color);
     box-shadow: 1px 1px 1px var(--gray-500);
-    top: 0%;
+    padding-bottom: .5rem;
 }
 
 .logo-design {
@@ -15,18 +15,6 @@
     font-weight: 600;
     margin-left: 1rem;
     margin-top: 1.2rem;
-}
-
-.logo-img{
-    height: 3rem;
-    border: 1px solid;
-}
-
-.small-txt {
-    margin-left: 1.1rem;
-    font-size: small;
-    font-weight: bold;
-    margin-top: -6px;
 }
 
 .side-nav-section {
