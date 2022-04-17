@@ -4,8 +4,6 @@ export const styleReducer = (state, action) => {
             return { ...state, byBold: action.payload }
         case "italic":
             return { ...state, byItalic: action.payload }
-        case "underline":
-            return { ...state, byunderline: action.payload }
         case "strike":
             return { ...state, byStrike: action.payload }
         default:

@@ -11,7 +11,7 @@ const Notes = () => {
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
 
-    const { byBold, byItalic, byUnderline, byStrike } = txtStyle;
+    const { byBold, byItalic, byStrike } = txtStyle;
     const data = { Title: title, Content: content }
 
     return (
@@ -31,9 +31,6 @@ const Notes = () => {
                             </button>
                             <button className="txt-style-btn" onClick={() => dispatchTxtStyle({ type: "italic", payload: !byItalic })}>
                                 <img className="txt-logo-img" src="https://cdn-icons-png.flaticon.com/128/5099/5099214.png" alt="" />
-                            </button>
-                            <button className="txt-style-btn" onClick={() => dispatchTxtStyle({ type: "underline", payload: !byUnderline })}>
-                                <img className="txt-logo-img" src="https://cdn-icons.flaticon.com/png/128/4662/premium/4662458.png?token=exp=1649605613~hmac=f58f1eb95467ead63c6cd94328476605" alt="" />
                             </button>
                             <button className="txt-style-btn" onClick={() => dispatchTxtStyle({ type: "strike", payload: !byStrike })}>
                                 <img className="txt-logo-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9Xkin5zZMUKfIhPVv77p1SQ61zxQ1Mz2pQ&usqp=CAU" alt="" />

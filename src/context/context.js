@@ -12,7 +12,6 @@ const NoteProvider = ({children}) => {
     const [txtStyle, dispatchTxtStyle ] = useReducer(styleReducer,{
         byBold: false,
         byItalic: false,
-        byUnderline: false,
         byStrike: false
     })
 
