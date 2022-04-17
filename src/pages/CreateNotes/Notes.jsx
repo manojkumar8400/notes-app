@@ -37,7 +37,7 @@ const Notes = () => {
                             </button>
                         </section>
                         <section>
-                            <textarea style={{ fontWeight: byBold ? "bold" : "inherit", fontStyle: byItalic ? "italic" : "inherit", textDecoration: byUnderline ? "underline" : "inherit", textDecorationLine: byStrike ? "line-through" : "inherit" }} onChange={(e) => { setContent(e.target.value) }} className="content" name="text" cols="30" rows="10" placeholder=""></textarea>
+                            <textarea style={{ fontWeight: byBold ? "bold" : "inherit", fontStyle: byItalic ? "italic" : "inherit", textDecorationLine: byStrike ? "line-through" : "inherit" }} onChange={(e) => { setContent(e.target.value) }} className="content" name="text" cols="30" rows="10" placeholder=""></textarea>
                         </section>
                     </div>
                     <section className="btn-section flex">
