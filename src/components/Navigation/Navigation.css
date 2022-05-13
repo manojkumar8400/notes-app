@@ -28,7 +28,22 @@
     cursor: pointer;
 }
 
-.darkmode-img {
-    width: 1.8rem;
-    cursor: pointer;
+.theme-btn{
+    border: none;
+    background-color: inherit;
+}
+
+.theme-mode-icon {
+    width: 1.5rem;
+    background-color: inherit;
+}
+
+.moon-logo {
+    transform: translateY(0%) rotateZ(0deg);
+    transition: 1s;
+}
+
+.sun-logo {
+    transform: translateY(0) rotateZ(90deg);
+    transition: 1s;
 }

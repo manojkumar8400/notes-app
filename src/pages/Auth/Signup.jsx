@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Auth.css";
 import { Navigation } from "../../components/Navigation/Navigation";
@@ -9,33 +10,45 @@ const Signup = () => {
             <div>
                 <Navigation />
             </div>
-            <form className="signup-main-container">
-                <div className="signup-container">
-                    <h2 className="signup-heading">Signup</h2>
-                    <label className="email-add-txt">Email address</label>
-                    <input className="email-input input" type="email" placeholder="abc@gmail.com" />
-                    <label className="email-add">First name</label>
-                    <input className="email-input input" type="text" placeholder="Enter First Name" />
-                    <label className="email-add">Last name</label>
-                    <input className="email-input input" type="text" placeholder="Enter Last Name" />
-                    <label className="password">Password</label>
-                    <input className="email-input input" type="password" placeholder="Enter Password" />
-                    <label className="password">Confirm Password</label>
-                    <input className="email-input input" type="password" placeholder="Confirm Password" /><br />
-                    <div className="checkbox-item">
-                        <input className="checkbox-input" type="checkbox" />
-                        <label className="checkbox-txt">I accept all Terms & Conditions</label><br />
-                    </div>
-                    <button className="login-btn">
-                        <Link to="/AllProducts">
+            <div className="login-main-container flex-center">
+                <form className="log-container">
+                    <div className="signup-container flex-column">
+                        <h3 className="text-align mtb-16">Signup</h3>
+                        <label className="txt">Email address</label>
+                        <input className="email-input input" type="email" placeholder="abc@gmail.com" />
+                        <div className="name">
+                            <section>
+                                <label className="txt">First name</label>
+                                <input className="input width" type="text" placeholder="Enter First Name" />
+                            </section>
+                            <section>
+                                <label className="txt">Last name</label>
+                                <input className="input width" type="text" placeholder="Enter Last Name" />
+                            </section>
+                        </div>
+                        <div className="name">
+                            <section>
+                                <label className="txt">Password</label>
+                                <input className="input width" type="password" placeholder="Enter Password" />
+                            </section>
+                            <section>
+                                <label className="txt">Confirm Password</label>
+                                <input className="input width" type="password" placeholder="Confirm Password" /><br />
+                            </section>
+                        </div>
+                        <div>
+                            <input className="checkbox-input" type="checkbox" />
+                            <label className="txt">I accept all Terms & Conditions</label><br />
+                        </div>
+                        <button className="mtb-16 w-100 ptb-8">
                             Create New Account
-                        </Link>
-                    </button>
-                    <label className="login-link">Already a member?
-                        <Link to="/Login"><strong>Login</strong></Link>
-                    </label>
-                </div>
-            </form>
+                        </button>
+                        <label className="text-align">Already a member?
+                            <Link to="/login" className="color"><strong> Login</strong></Link>
+                        </label>
+                    </div>
+                </form>
+            </div>
         </>
     )
 }

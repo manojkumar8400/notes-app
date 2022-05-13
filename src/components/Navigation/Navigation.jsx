@@ -1,22 +1,28 @@
 import React from 'react';
 import "./Navigation.css";
 import { Link } from 'react-router-dom';
+import { useTheme } from "../../context/themeContext";
 
 const Navigation = () => {
 
+    const { theme, setTheme } = useTheme();
 
     return (
         <>
             <nav className="nav-bar flex jstfy-ctnt-spc-between position-sticky z-index">
-                <div className='logo-design flex flex-direction-column'>
+                <div className='logo-design flex-column'>
                     <Link to="/" className="logo"><span> Notejoy </span></Link>
                 </div>
-                <ul className="side-nav-section flex jstfy-ctnt-spc-between align-itm-center">
-                    <Link to="/Login">
-                        <li className="login-btn">👤</li>
+                <section className="side-nav-section flex jstfy-ctnt-spc-between align-itm-center">
+                    <Link to="/login">
+                        <button className="login-btn">👤</button>
                     </Link>
-                    <li className="darkmode-btn btn"><img className='darkmode-img' src="https://cdn-icons.flaticon.com/png/128/4489/premium/4489231.png?token=exp=1649734041~hmac=f180853bb021e7917ec79aa2b7a43804" alt="dark mode" /></li>
-                </ul>
+                    <button onClick={() => {
+                        setTheme(theme === "light" ? "dark" : "light");
+                    }} className="theme-btn">
+                        {theme === 'light' ? <img className="theme-mode-icon moon-logo" src="./assests/moon.svg" alt="night mode" /> : <img className="theme-mode-icon sun-logo" src="./assests/sunny.svg" alt="night mode" />}
+                    </button>
+                </section>
             </nav>
         </>
     )

@@ -1,36 +1,38 @@
-import "./SideBar.css";
+import React from "react";
 import { Link } from "react-router-dom";
+import "./SideBar.css";
+import { useNoteContext } from "../../context/notesContext";
 
 const SideBar = () => {
+
+    const { note, dispatchNote } = useNoteContext();
     return (
-        <>
-            <div className="sideBar-container">
-                <Link to="/Notes">
-                    <div className="side-icon notes">
-                        <span><i class="fa fa-sticky-note-o"></i></span>
-                        <span>Notes</span>
-                    </div>
-                </Link>
-                <Link to="/Label">
-                    <div className="side-icon">
-                        <span><i class="fa fa-tags side-icon"></i></span>
-                        <span>Label</span>
-                    </div>
-                </Link>
-                <Link to="/Archieve">
-                    <div className="side-icon">
-                        <span><i class="fa fa-archive side-icon"></i></span>
-                        <span>Archieve</span>
-                    </div>
-                </Link>
-                <Link to="/Trash">
-                    <div className="side-icon">
-                        <span><i class="fa fa-trash-o side-icon"></i></span>
-                        <span>Trash</span>
-                    </div>
-                </Link>
-            </div>
-        </>
+        <div className="sideBar-container">
+            <Link to="/text-editor">
+                <div className="side-icon notes">
+                    <span><i className="fa fa-sticky-note-o"></i></span>
+                    <span>Notes</span>
+                </div>
+            </Link>
+            <Link to="/label">
+                <div className="side-icon">
+                    <i className="sidebar-logo fa fa-bookmark-o"></i>
+                    <span>Label</span>
+                </div>
+            </Link>
+            <Link to="/archieve">
+                <div className="side-icon">
+                    <img className="sidebar-logo" src="./assests/archieve-2.png" alt="archieve logo" />
+                    <span>Archieve</span>
+                </div>
+            </Link>
+            <Link to="/trash">
+                <div className="side-icon">
+                    <img className="sidebar-logo" src="./assests/trash.svg" alt="trash logo" />
+                    <span>Trash</span>
+                </div>
+            </Link>
+        </div>
     )
 }
 
