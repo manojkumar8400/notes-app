@@ -1,0 +1,128 @@
+.main-container {
+    grid-template-columns: 12rem 1fr 8rem;
+}
+
+.container {
+    height: 95vh;
+}
+
+.editor-section {
+    width: 35.2rem;
+    border: 1px solid;
+}
+
+.title {
+    padding: 5px .5rem;
+    width: 35rem;
+    border: none;
+}
+
+.quill {
+    width: 35rem;
+    height: 5rem;
+}
+
+.label {
+    padding: 4px .5rem;
+    width: 35rem;
+    margin-top: 2rem;
+    border: none;
+}
+
+.editor-bottom-btn {
+    width: 35rem;
+    padding: 3px;
+}
+
+.editor-style-btn {
+    margin: 0 .3rem;
+    margin-top: 3px;
+    border: none;
+    background-color: inherit;
+}
+
+.color-btn {
+    position: absolute;
+    width: 7rem;
+}
+
+.priority-btn {
+    position: absolute;
+    width: 12rem;
+    left: 4.5rem;
+    bottom: 4px;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-inherit {
+    display: inherit;
+}
+
+.red-color-btn {
+    background-color: var(--red-900);
+}
+
+.green-color-btn {
+    background-color: var(--green-900);
+}
+
+.yellow-color-btn {
+    background-color: var(--yellow-900);
+}
+
+.aqua-color-btn {
+    background-color: var(--aqua-900);
+}
+
+.bottom-style-icon {
+    width: 1.5rem;
+}
+
+.add-note-btn {
+    padding: .3rem .5rem;
+    margin-right: .5rem;
+}
+
+.card {
+    min-width: 8rem;
+    height: 5rem;
+    text-align: center;
+}
+
+.label-section {
+    width: 17rem;
+    height: 12rem;
+    border: 2px solid;
+    padding: 1rem;
+    border-radius: .7rem;
+    margin: 3rem 1rem 0 1rem;
+}
+
+.data-render {
+    height: 9rem;
+}
+
+.priority-style {
+    right: 0%;
+    top: 0;
+    background-color: var(--white);
+}
+
+.bottom-icon {
+    bottom: 0%;
+    right: 5%;
+    visibility: hidden;
+}
+
+.fa {
+    font-size: 1.4rem;
+    padding: 4px;
+}
+
+.date {
+    position: absolute;
+    font-size: small;
+}

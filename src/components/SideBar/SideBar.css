@@ -1,23 +1,22 @@
-.sideBar-container {
-    padding: 1rem;
-    display: grid;
-    grid-gap: 1rem;
-    width: 15rem;
+.sidebar-logo {
+    width: 1.5rem;
 }
 
 .side-icon {
     display: flex;
-    gap: .5rem;
-    font-size: 1.5rem;
-    margin: 0rem 0;
-    padding-left: .5rem;
-    border-radius: .5rem;
+    gap: 1rem;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
     padding: .3rem .5rem;
 }
 
-.notes{
-    padding: .5rem 1rem;
+.trash-icon{
+    width: 1.4rem;
+    margin-top: 8px;
 }
+
 .side-icon:hover {
     background-color: var(--gray-200);
 }

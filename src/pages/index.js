@@ -1,9 +1,8 @@
-import { Home } from "./Home/Home";
-import { Notes } from "./CreateNotes/Notes";
-import { Label } from "./Label/Label";
-import { Archieve } from "./Archieve/Archieve";
-import { Trash } from "./Trash/Trash";
-import { Login } from "./Auth/Login";
-import { Signup } from "./Auth/Signup";
-
-export { Home, Notes, Label, Archieve, Trash, Login, Signup }
+export { Home } from "./Home/Home";
+export { Label } from "./Label/Label";
+export { Archieve } from "./Archieve/Archieve";
+export { Trash } from "./Trash/Trash";
+export { Login } from "./Auth/Login";
+export { Signup } from "./Auth/Signup";
+export { TextEditor } from "./RichTextEditor/TextEditor";
+export { PageNotFound } from "../pages/404Page/PageNotFound";

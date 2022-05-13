@@ -18,6 +18,10 @@
   --main-body: rgb(247, 240, 240);
   --txt-margin: 2rem 0 .5rem 0;
   --txt-font-size: 1rem;
+  --green-900: rgb(0, 128, 0);
+  --red-900: rgb(255, 0, 0);
+  --yellow-900: rgb(255, 255, 0);
+  --aqua-900: rgb(0, 255, 255);
 }
 
 button {
@@ -26,8 +30,29 @@ button {
 
 a {
   text-decoration: none;
+  color: var(--black-900);
 }
 
 ul, ol {
   list-style: none;
+}
+
+p {
+  word-break: break-all;
+}
+
+.bg-white{
+  background-color: var(--white);
+}
+
+.bg-dark{
+  background-color: var(--black-900);
+}
+
+.color-black{
+  color: var(--black-900);
+}
+
+.color-white{
+  color: var(--white);
 }

@@ -1,4 +1,3 @@
-import { SideBar } from "./SideBar/SideBar";
-import { Navigation } from "./Navigation/Navigation";
-
-export { SideBar, Navigation }
+export { SideBar } from "./SideBar/SideBar";
+export { Navigation } from "./Navigation/Navigation";
+export { FilterBar } from "./FilterBar/FilterBar";
