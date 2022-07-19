@@ -36,15 +36,17 @@ const Signup = () => {
                                 <input className="input width" type="password" placeholder="Confirm Password" /><br />
                             </section>
                         </div>
-                        <div>
+                        <label className="txt">
                             <input className="checkbox-input" type="checkbox" />
-                            <label className="txt">I accept all Terms & Conditions</label><br />
-                        </div>
-                        <button className="mtb-16 w-100 ptb-8">
-                            Create New Account
-                        </button>
+                            I accept all Terms & Conditions
+                        </label>
+                        <Link to="/">
+                            <button className="create-btn mtb-16 w-100 ptb-8">
+                                Create New Account
+                            </button>
+                        </Link>
                         <label className="text-align">Already a member?
-                            <Link to="/login" className="color"><strong> Login</strong></Link>
+                            <Link to="/login" className="color"><strong className="link-color"> Login</strong></Link>
                         </label>
                     </div>
                 </form>

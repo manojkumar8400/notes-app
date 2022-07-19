@@ -35,11 +35,11 @@ const getCurrentDate = (separator = '/') => {
 
 export const TextEditor = () => {
 
-    const { note: { saveNote }, dispatchNote, filter:{byPriority, Priority, bySort}, setFilter } = useNoteContext();
+    const { note: { saveNote }, dispatchNote, filter: { byPriority, Priority, bySort }, setFilter } = useNoteContext();
     const [value, setValue] = useState("");
     const [title, setTitle] = useState("");
     const [label, setLabel] = useState("");
-    const [ date, setDate ] = useState(0);
+    const [date, setDate] = useState(0);
     const [bgColor, setBgColor] = useState("");
     const [priority, setPriority] = useState("");
     const [colorBtn, setColorBtn] = useState(true);
@@ -49,7 +49,7 @@ export const TextEditor = () => {
 
     const clickHandler = () => {
         dispatchNote({ type: "SAVE", payload: data });
-        setDate(prev=>prev+1)
+        setDate(prev => prev + 1)
         setValue("");
         setTitle("");
         setLabel("");
@@ -69,19 +69,19 @@ export const TextEditor = () => {
         let sortData = saveNote;
 
         if (byPriority === "LOW") {
-            sortData = sortData.filter((i)=>i.priority === "LOW")
+            sortData = sortData.filter((i) => i.priority === "LOW")
         }
         if (byPriority === "MEDIUM") {
-            sortData = sortData.filter((i)=>i.priority === "MEDIUM")
+            sortData = sortData.filter((i) => i.priority === "MEDIUM")
         }
         if (byPriority === "HIGH") {
-            sortData = sortData.filter((i)=>i.priority === "HIGH")
+            sortData = sortData.filter((i) => i.priority === "HIGH")
         }
         if (bySort === "LATEST") {
-            sortData = sortData.sort((a,b)=>a.date,b.date)
+            sortData = sortData.sort((a, b) => a.date, b.date)
         }
-        if ( bySort === "OLDEST") {
-            sortData = sortData.sort((a,b)=>b.date,a.date)
+        if (bySort === "OLDEST") {
+            sortData = sortData.sort((a, b) => b.date, a.date)
         }
         return sortData;
     }
@@ -90,45 +90,52 @@ export const TextEditor = () => {
         <div>
             < Navigation />
             <div className="main-container grid">
-                < SideBar />
-                <div className="container flex-columnn">
+                <section className="sideBar">
+                    < SideBar />
+                </section>
+                <section className="container flex-columnn">
                     <div style={{ backgroundColor: bgColor }} className="editor-section flex-column align-item m-auto">
                         <input onChange={(event) => { setTitle(event.target.value) }} className="title" type="text" value={title} placeholder="Title..." />
-                        <div className="quill m-auto">
+                        <section className="quill m-auto">
                             <ReactQuill
                                 modules={modules}
                                 formats={formats}
                                 value={value}
                                 placeholder="Take a note..."
                                 onChange={setValue}
+                                className="quill-editer"
                             />
-                        </div>
-                        <input onChange={(event) => { setLabel(event.target.value) }} className="label" type="text" value={label} placeholder="label" />
+                        </section>
+                        <input onChange={(event) => { setLabel(event.target.value) }} className="label" type="text" value={label} placeholder="Label..." />
                         <hr />
                         <section className="editor-bottom-btn flex jstfy-ctnt-spc-between">
                             <span className="relative">
-                                <button onClick={() => setColorBtn(colorBtn ? false : true)} className="editor-style-btn"><img className="bottom-style-icon" src="./assests/color-palette.svg" alt="color logo" /></button>
-                                <section className={`color-btn ${colorBtn ? "d-none" : "d-inherit"}`}>
-                                    <button onClick={() => setBgColor("red")} className="red-color-btn radious-50 p-8"></button>
-                                    <button onClick={() => setBgColor("green")} className="green-color-btn radious-50 p-8"></button>
-                                    <button onClick={() => setBgColor("yellow")} className="yellow-color-btn radious-50 p-8"></button>
-                                    <button onClick={() => setBgColor("aqua")} className="aqua-color-btn radious-50 p-8"></button>
-                                    <button onClick={() => setBgColor("white")} className="white-color-btn radious-50 p-8"></button>
+                                <button onClick={() => setColorBtn(colorBtn ? false : true)} className="editor-style-btn"><span class="material-icons f-size-20">color_lens</span></button>
+                                <section className={`color-btn ${colorBtn ? "d-none" : "d-inherit"}`} id="color-section">
+                                    <button onClick={() => setBgColor("red")} className="color-lens"></button>
+                                    <button onClick={() => setBgColor("green")} className="color-lens"></button>
+                                    <button onClick={() => setBgColor("yellow")} className="color-lens"></button>
+                                    <button onClick={() => setBgColor("aqua")} className="color-lens"></button>
+                                    <button onClick={() => setBgColor("white")} className="color-lens"></button>
                                 </section>
-                                <button onClick={() => setPriorityBtn(priorityBtn ? false : true)} className="editor-style-btn"><img className="bottom-style-icon" src="./assests/bar-chart-outline.svg" alt="chart logo" /></button>
-                                <section className={`priority-btn ${priorityBtn ? "d-none" : "d-inherit"}`}>
-                                    <input onClick={(e) => setPriority(e.target.value)} type="radio" name="priority" value="LOW" />
-                                    <label>Low</label>
-                                    <input onClick={(e) => setPriority(e.target.value)} type="radio" name="priority" value="MEDIUM" />
-                                    <label>Medium</label>
-                                    <input onClick={(e) => setPriority(e.target.value)} type="radio" name="priority" value="HIGH" />
-                                    <label>High</label>
+                                <button onClick={() => setPriorityBtn(priorityBtn ? false : true)} className="editor-style-btn"><span class="material-icons f-size-20">bar_chart</span></button>
+                                <section className={`priority-btn ${priorityBtn ? "d-none" : "d-inherit"}`} id="priority-section">
+                                    <label>
+                                        <input onClick={(e) => setPriority(e.target.value)} type="radio" name="priority" value="LOW" />Low
+                                    </label>
+                                    <label>
+                                        <input onClick={(e) => setPriority(e.target.value)} type="radio" name="priority" value="MEDIUM" />Medium
+                                    </label>
+                                    <label>
+                                        <input onClick={(e) => setPriority(e.target.value)} type="radio" name="priority" value="HIGH" />High
+                                    </label>
                                 </section>
                             </span>
                             <span>
-                                <button className="add-note-btn" onClick={clickHandler} disabled={
-                                    title === "" && value === ""
-                                }>Add Note</button>
+                                <button className="add-note-btn" onClick={clickHandler}
+                                    disabled={title === "" && value === ""}>
+                                    Add Note
+                                </button>
                             </span>
                         </section>
                     </div>
@@ -141,47 +148,53 @@ export const TextEditor = () => {
                                 <section style={{ backgroundColor: content.bgColor }} className='label-section relative' key={content.id}>
                                     <section className="data-render flex-column jstfy-ctnt-spc-between">
                                         <div className="relative">
-                                            <p>Title: {content.Title}</p>
+                                            {
+                                                content.Title.length > 0
+                                                    ? <p>{content.Title}</p>
+                                                    : <p>Title</p>
+                                            }
                                             <p className="priority-style absolute">{content.priority}</p>
                                             <hr />
                                             <p dangerouslySetInnerHTML={{ __html: content.Value }}></p>
                                         </div>
                                         <div>
                                             < hr />
-                                            <p>Label: {content.Label}</p>
+                                            {
+                                                content.Label.length > 0
+                                                    ? <p>{content.Label}</p>
+                                                    : <p>Label</p>
+                                            }
                                             <p className="date">{content.Date}</p>
                                         </div>
                                     </section>
                                     <section className='bottom-icon flex absolute'>
 
-
                                         <button onClick={() => editContent(content)}>
-                                            <i className="fa fa-edit"></i>
+                                            <span class="material-icons f-size-20">edit_note</span>
                                         </button>
-
 
                                         <button onClick={() => {
                                             dispatchNote({ type: "Archieve", payload: content })
                                             dispatchNote({ type: "Remove_Data", payload: content })
                                             dispatchNote({ type: "Remove_From_Label", payload: content })
                                         }}>
-                                            <i className="fa fa-archive"></i>
+                                            <span class="material-icons f-size-20">archive</span>
                                         </button>
                                         <button onClick={() => {
                                             dispatchNote({ type: "Trash", payload: content })
                                             dispatchNote({ type: "Remove_Data", payload: content })
                                             dispatchNote({ type: "Remove_From_Label", payload: content })
                                         }}>
-                                            <i className="fa fa-trash-o"></i>
+                                            <span class="material-icons f-size-20">delete_forever</span>
                                         </button>
                                     </section>
                                 </section>
                             )
                         })}
                     </div>
-                </div>
+                </section>
                 < FilterBar />
-            </div>
-        </div>
-    );
-} 
+            </div >
+        </div >
+    )
+};

@@ -1,3 +1,4 @@
+export { Logout } from "./Auth/Logout";
 export { Home } from "./Home/Home";
 export { Label } from "./Label/Label";
 export { Archieve } from "./Archieve/Archieve";

@@ -1,20 +1,25 @@
-.filter-container{
+.filter-container {
     line-height: 1.3rem;
 }
 
-.display{
+.filter-container label {
+    cursor: pointer;
+}
+
+.display {
     display: none;
 }
 
-.inherit{
+.inherit {
     display: inherit;
 }
 
-.filter-icon-btn{
+.filter-icon-btn {
     margin: .3rem 0 0 6rem;
     border: none;
-    background-color: #fff;
+    background-color: var(--white);
 }
-.funnel-icon{
-    width: 1.5rem;
+
+.filter-icon {
+    font-size: 1.5rem;
 }

@@ -1,15 +1,27 @@
-.c-section{
+.label-container {
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+}
+
+.c-section {
     margin-top: 1rem;
 }
 
-.label-section:hover .bottom-icon{
+.label-section:hover .bottom-icon {
     visibility: inherit;
 }
 
-.fa:hover{
+.fa:hover {
     cursor: pointer;
     background-color: transparent;
 }
-.label-section{
+
+.label-section {
     height: 100vh;
+}
+
+.label-status {
+    margin: auto;
+    font-size: 1.3rem;
+    font-weight: 500;
 }

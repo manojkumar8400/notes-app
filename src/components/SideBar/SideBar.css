@@ -1,18 +1,20 @@
-.sidebar-logo {
-    width: 1.5rem;
+.sideBar-container {
+    height: 91vh;
 }
 
 .side-icon {
     display: flex;
-    gap: 1rem;
+    gap: .8rem;
     font-size: 1.3rem;
-    margin: 1rem 0;
-    border-top-right-radius: .5rem;
-    border-bottom-right-radius: .5rem;
-    padding: .3rem .5rem;
+    margin: .5rem 0;
+    padding: .4rem .7rem;
 }
 
-.trash-icon{
+.active {
+    color: var(--secondary-color);
+}
+
+.trash-icon {
     width: 1.4rem;
     margin-top: 8px;
 }

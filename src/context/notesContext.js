@@ -5,9 +5,8 @@ const noteContext = createContext();
 
 const NoteProvider = ({ children }) => {
 
-    const [note, dispatchNote ] = useReducer(noteReducer, initialValue );
-
-    const [filter, dispatchFilter ] = useReducer(filterReducer, filterInitialvalue);
+    const [note, dispatchNote] = useReducer(noteReducer, initialValue);
+    const [filter, dispatchFilter] = useReducer(filterReducer, filterInitialvalue);
 
     return (
         <noteContext.Provider value={{ note, dispatchNote, filter, dispatchFilter }}>

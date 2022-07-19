@@ -9,14 +9,12 @@ const Home = () => {
                 <div className="txt-container grid">
                     <h1>Notejoy</h1>
                     <h3>Meet Your Modern Note Taking App</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vero atque porro sapiente eum corrupti
-                        consequatur culpa soluta, optio, explicabo id nostrum ad quasi aut, dicta voluptas adipisci voluptatem
-                        doloremque!
+                    <p>
+                        This is a note-taking app, in this app, you can keep notes of your essential work and daily schedule.
                     </p>
                     <Link to="/text-editor">
                         <button className="join-btn">Join Now</button>
                     </Link>
-                    <Link to="/text-editor">Join as a Guest</Link>
                 </div>
                 <img className="home-img" src="/assests/home-img.svg" alt="home image" />
             </div>
