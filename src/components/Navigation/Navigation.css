@@ -1,49 +1,22 @@
 .nav-bar {
-    padding-top: .3rem;
     background-color: var(--secondary-color);
     box-shadow: 1px 1px 1px var(--gray-500);
-    padding-bottom: .5rem;
+    padding: .5rem 2rem;
+    align-items: center;
 }
 
 .logo-design {
     margin-top: -.8rem;
-    margin-left: 6rem;
 }
 
 .logo {
     font-size: 2rem;
     font-weight: 600;
-    margin-left: 1rem;
     margin-top: 1.2rem;
 }
 
-.side-nav-section {
-    width: 12rem;
-    margin-right: 6rem;
-}
-
 .login-btn {
-    font-size: 1.3rem;
-    padding: .3rem .8rem;
     cursor: pointer;
-}
-
-.theme-btn{
+    background-color: initial;
     border: none;
-    background-color: inherit;
-}
-
-.theme-mode-icon {
-    width: 1.5rem;
-    background-color: inherit;
-}
-
-.moon-logo {
-    transform: translateY(0%) rotateZ(0deg);
-    transition: 1s;
-}
-
-.sun-logo {
-    transform: translateY(0) rotateZ(90deg);
-    transition: 1s;
 }

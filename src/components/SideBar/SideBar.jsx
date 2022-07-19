@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./SideBar.css";
 import { useNoteContext } from "../../context/notesContext";
 
@@ -7,32 +7,32 @@ const SideBar = () => {
 
     const { note, dispatchNote } = useNoteContext();
     return (
-        <div className="sideBar-container">
-            <Link to="/text-editor">
-                <div className="side-icon notes">
-                    <span><i className="fa fa-sticky-note-o"></i></span>
+        <ul className="sideBar-container">
+            <NavLink to="/text-editor" className={({ isActive }) => (isActive ? "active" : undefined)}>
+                <li className="side-icon notes">
+                    <span class="material-icons f-size-20">text_snippet</span>
                     <span>Notes</span>
-                </div>
-            </Link>
-            <Link to="/label">
-                <div className="side-icon">
-                    <i className="sidebar-logo fa fa-bookmark-o"></i>
+                </li>
+            </NavLink>
+            <NavLink to="/label" className={({ isActive }) => (isActive ? "active" : undefined)}>
+                <li className="side-icon">
+                    <span class="material-icons f-size-20">bookmark</span>
                     <span>Label</span>
-                </div>
-            </Link>
-            <Link to="/archieve">
-                <div className="side-icon">
-                    <img className="sidebar-logo" src="./assests/archieve-2.png" alt="archieve logo" />
+                </li>
+            </NavLink>
+            <NavLink to="/archieve" className={({ isActive }) => (isActive ? "active" : undefined)}>
+                <li className="side-icon">
+                    <span class="material-icons f-size-20">archive</span>
                     <span>Archieve</span>
-                </div>
-            </Link>
-            <Link to="/trash">
-                <div className="side-icon">
-                    <img className="sidebar-logo" src="./assests/trash.svg" alt="trash logo" />
+                </li>
+            </NavLink>
+            <NavLink to="/trash" className={({ isActive }) => (isActive ? "active" : undefined)}>
+                <li className="side-icon">
+                    <span class="material-icons f-size-20">delete_forever</span>
                     <span>Trash</span>
-                </div>
-            </Link>
-        </div>
+                </li>
+            </NavLink>
+        </ul>
     )
 }
 

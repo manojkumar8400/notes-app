@@ -6,7 +6,7 @@
 
 :root {
   --primary-color: rgb(192, 156, 103);
-  --secondary-color: rgb(231, 228, 220);
+  --secondary-color: rgb(231, 124, 183);
   --footer-container: rgb(205, 206, 189);
   --white: rgb(255, 255, 255);
   --gray-200: rgb(211, 211, 211);
@@ -39,20 +39,4 @@ ul, ol {
 
 p {
   word-break: break-all;
-}
-
-.bg-white{
-  background-color: var(--white);
-}
-
-.bg-dark{
-  background-color: var(--black-900);
-}
-
-.color-black{
-  color: var(--black-900);
-}
-
-.color-white{
-  color: var(--white);
 }
