@@ -1,7 +1,6 @@
 const filterInitialvalue = {
     byPriority: null,
-    Priority: true,
-    bySort: ""
+    bySort: null
 }
 
 const filterReducer = ((state, action) => {
@@ -12,15 +11,13 @@ const filterReducer = ((state, action) => {
             return { ...state, byPriority: action.payload }
         case "HIGH":
             return { ...state, byPriority: action.payload }
-        case "PRIORITY":
-            return { ...state, byPriority: action.payload }
         case "SORT":
-            return { ...state, byPriority: action.payload }
+            return { ...state, bySort: action.payload }
         case "CLEAR":
-            return { byPriority: null }
+            return { byPriority: null, bysort: null }
         default:
             return state
     }
 })
 
-export { filterInitialvalue, filterReducer}
+export { filterInitialvalue, filterReducer }

@@ -35,7 +35,7 @@ const getCurrentDate = (separator = '/') => {
 
 export const TextEditor = () => {
 
-    const { note: { saveNote }, dispatchNote, filter: { byPriority, Priority, bySort }, setFilter } = useNoteContext();
+    const { note: { saveNote }, dispatchNote, filter: { byPriority, bySort } } = useNoteContext();
     const [value, setValue] = useState("");
     const [title, setTitle] = useState("");
     const [label, setLabel] = useState("");
@@ -69,19 +69,19 @@ export const TextEditor = () => {
         let sortData = saveNote;
 
         if (byPriority === "LOW") {
-            sortData = sortData.filter((i) => i.priority === "LOW")
-        }
+            sortData = sortData.filter((i) => i.priority === "LOW");
+        };
         if (byPriority === "MEDIUM") {
-            sortData = sortData.filter((i) => i.priority === "MEDIUM")
-        }
+            sortData = sortData.filter((i) => i.priority === "MEDIUM");
+        };
         if (byPriority === "HIGH") {
-            sortData = sortData.filter((i) => i.priority === "HIGH")
-        }
+            sortData = sortData.filter((i) => i.priority === "HIGH");
+        };
         if (bySort === "LATEST") {
-            sortData = sortData.sort((a, b) => a.date, b.date)
+            sortData = sortData.sort((a, b) => a.date - b.date)
         }
         if (bySort === "OLDEST") {
-            sortData = sortData.sort((a, b) => b.date, a.date)
+            sortData = sortData.sort((a, b) => b.date - a.date)
         }
         return sortData;
     }

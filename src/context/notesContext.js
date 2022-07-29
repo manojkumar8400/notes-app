@@ -1,6 +1,8 @@
 import { createContext, useReducer, useContext } from "react";
 import { noteReducer, initialValue } from "../reducers/NoteReducer";
 import { filterReducer, filterInitialvalue } from "../reducers/filterReducer";
+
+
 const noteContext = createContext();
 
 const NoteProvider = ({ children }) => {

@@ -7,7 +7,7 @@ const initialValue = {
 }
 
 const noteReducer = (state, action) => {
-    console.log(action)
+    
     switch (action.type) {
         case "SAVE":
             return (action.payload.Label !== "" ? { ...state, saveLabel: [...state.saveLabel, action.payload], saveNote: [...state.saveNote, action.payload] } : { ...state, saveNote: [...state.saveNote, action.payload] })

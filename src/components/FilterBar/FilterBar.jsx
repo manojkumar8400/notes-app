@@ -5,8 +5,8 @@ import { useNoteContext } from '../../context/notesContext';
 
 export const FilterBar = () => {
 
-    const { filter, dispatchFilter } = useNoteContext();
-
+    const { dispatchFilter, filter: { byPriority, bySort } } = useNoteContext();
+    // checked={byPriority == "MEDIUM" ? true : false}
     const [showFilter, setShowFilter] = useState(true);
 
     const filterShow = () => {
@@ -21,26 +21,26 @@ export const FilterBar = () => {
                 <hr />
                 <p>Filter By</p>
                 <label htmlFor="low">
-                    <input onClick={() => dispatchFilter({ type: "LOW", payload: "LOW" })} type="checkbox" id='low' name="low" value="low" />
+                    <input onClick={() => dispatchFilter({ type: "LOW", payload: "LOW" })} checked={byPriority == "LOW" ? true : false} type="radio" id='low' name="priority" value="low" />
                     Low
                 </label><br />
                 <label htmlFor="medium">
-                    <input onClick={() => dispatchFilter({ type: "MEDIUM", payload: "MEDIUM" })} type="checkbox" id='medium' name="medium" value="medium" />
+                    <input onClick={() => dispatchFilter({ type: "MEDIUM", payload: "MEDIUM" })} checked={byPriority == "MEDIUM" ? true : false} type="radio" id='medium' name="priority" value="medium" />
                     Medium
                 </label><br />
                 <label htmlFor="high">
-                    <input onClick={() => dispatchFilter({ type: "HIGH", payload: "HIGH" })} type="checkbox" id='high' name="high" value="high" />
+                    <input onClick={() => dispatchFilter({ type: "HIGH", payload: "HIGH" })} checked={byPriority == "HIGH" ? true : false} type="radio" id='high' name="priority" value="high" />
                     High
                 </label>
                 <hr />
 
                 <p>sort by date</p>
                 <label htmlFor="new-date">
-                    <input onClick={() => dispatchFilter({ type: "SORT", payload: "Latest" })} type="radio" id='new-date' name="radio-btn" />
+                    <input onClick={() => dispatchFilter({ type: "SORT", payload: "LATEST" })} checked={bySort == "LATEST" ? true : false} type="radio" id='new-date' name="radio-btn" />
                     New date
                 </label><br />
                 <label htmlFor="old-date">
-                    <input onClick={() => dispatchFilter({ type: "SORT", payload: "OLDEST" })} type="radio" id='old-date' name="radio-btn" />
+                    <input onClick={() => dispatchFilter({ type: "SORT", payload: "OLDEST" })} checked={bySort == "OLDEST" ? true : false} type="radio" id='old-date' name="radio-btn" />
                     Old date
                 </label>
                 <hr />
