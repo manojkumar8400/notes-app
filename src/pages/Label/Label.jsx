@@ -26,7 +26,7 @@ export const Label = () => {
                         <p>Title: {content.Title}</p>
                         <p className="priority-style absolute">{content.priority}</p>
                         <hr />
-                        <p>{content.Value}</p>
+                        <p  dangerouslySetInnerHTML={{ __html: content.Value }}></p>
                       </div>
                       <div>
                         < hr />
